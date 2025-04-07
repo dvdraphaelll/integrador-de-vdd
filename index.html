@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
+
 </head>
 
 <body>
@@ -28,30 +29,43 @@
                 <div id="listaDemandas">
                     <!-- As demandas vão aparecer aqui -->
                 </div><!--listaDemandas-->
-                
+
                 <div id="btn" class="btn-meio">
                     <button id="abrir-demanda">
                         <img src="images/Botão.png" alt="">
                     </button>
-                 </div><!--btn-meio-->
+                </div><!--btn-meio-->
 
-                 <div id="overlay" class="oculto"></div>
+                <div id="overlay" class="oculto"></div>
 
-                 <div id="minha-demanda" class="demanda">
+                <div id="minha-demanda" class="demanda">
                     <div class="demanda-conteudo">
                         <h2>Faça sua demanda</h2>
-    
-                        <label for="descricao">Descriçao</label><br>
+            
+                        <label for="titulo">Setor:</label>
+                        <select id="titulo">
+                            <option value="">Selecione um setor</option>
+                            <option value="RH">RH</option>
+                            <option value="Financeiro">Financeiro</option>
+                            <option value="TI">TI</option>
+                            <option value="Logística">Logística</option>
+                            <option value="Comercial">Comercial</option>
+                            <option value="Marketing">Marketing</option>
+                        </select><br>
+
+                        <label for="descricao"></label><br>
                         <textarea id="descricao" rows="5"></textarea><br>
-    
-                        <label for="titulo">Título</label><br>
-                        <input type="text" id="titulo"><br>
-    
+
                         <button id="concluido" class="botao-concluido">Concluído</button>
                     </div>
                 </div><!--demanda-->
 
-
+                <div id="visualizarDemanda" class="demanda-visualizacao" style="display: none;">
+                    <div class="demanda-conteudo">
+                        <h2 id="visualTitulo">Título</h2>
+                        <p id="visualDescricao">Descrição</p>
+                    </div>
+                </div><!--demanda-vizualizacao-->
 
             </div><!--interface-->
         </section><!--meio-->

@@ -53,6 +53,40 @@ body {
   display: flex;
   position: relative;
 }
+.meio .interface .demanda-visualizacao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 2vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  width: 40vw;
+  text-align: center;
+  max-height: 40vh; /* altura máxima antes de ativar rolagem */
+  overflow-y: auto; /* rolagem vertical se ultrapassar */
+  word-break: break-word;
+  padding-right: 0.5vw; /* dá espaço pra barra de rolagem */
+}
+.meio .interface .demanda-visualizacao h2 {
+  margin-bottom: 1vh;
+  justify-self: flex-start;
+}
+.meio .interface .demanda-visualizacao p {
+  font-size: 1.2vw;
+  margin-bottom: 2vh;
+}
+.meio .interface .demanda-visualizacao button {
+  padding: 0.5vw 1vw;
+  font-size: 1vw;
+  cursor: pointer;
+}
 .meio .interface .oculto {
   display: none;
   position: fixed;
@@ -112,22 +146,71 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
 }
-.caixa-demanda .titulo-demanda {
+
+.titulo-demanda {
   margin-top: 1vh;
-  font-size: 1.35vw;
+  font-size: 1.5vw;
+  word-wrap: break-word; /* quebra palavras grandes */
+  word-break: break-word; /* quebra mesmo se for uma palavra só longa */
+  overflow-wrap: break-word;
+  white-space: normal; /* permite quebra de linha */
+  max-width: 100%;
 }
-.caixa-demanda .descricao-container {
-  flex: 1; /* ocupa todo o espaço restante */
+
+.descricao-container {
+  flex: 1;
+  /* ocupa todo o espaço restante */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.caixa-demanda .descricao-demanda {
-  font-size: 1.2vw;
+
+.descricao-demanda {
+  font-size: 1.3vw;
   margin: 0;
-  margin-top: -2vh;
+  word-wrap: break-word; /* quebra palavras grandes */
+  word-break: break-word; /* quebra mesmo se for uma palavra só longa */
+  overflow-wrap: break-word;
+  white-space: normal; /* permite quebra de linha */
+  max-width: 100%;
+  text-align: center;
+  padding: 0vh 0.25vw;
+}
+
+.demanda-visualizacao {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 2vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  width: 40vw;
+  text-align: center;
+}
+
+.demanda-visualizacao h2 {
+  margin-bottom: 1vh;
+}
+
+.demanda-visualizacao p {
+  font-size: 1.2vw;
+  margin-bottom: 2vh;
+}
+
+.demanda-visualizacao button {
+  padding: 0.5vw 1vw;
+  font-size: 1vw;
+  cursor: pointer;
 }
 
 footer {
