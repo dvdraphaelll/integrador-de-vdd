@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="menu">
+                <a href="#"><button>TELA INICIAL</button></a>
+                <a href="#"><button>SUAS DEMANDAS</button></a>
+                <a href="#"><button>SUAS DEMANDAS</button></a>
+                <a href="#"><button>SUAS DEMANDAS</button></a>
+            </div><!--menu-->
+        </div><!--interface-->
+    </header>
+
+    <main>
+        <section class="meio">
+            <div class="interface">
+
+                <div id="listaDemandas">
+                    <!-- As demandas vão aparecer aqui -->
+                </div><!--listaDemandas-->
+                
+                <div id="btn" class="btn-meio">
+                    <button id="abrir-demanda">
+                        <img src="images/Botão.png" alt="">
+                    </button>
+                 </div><!--btn-meio-->
+
+                 <div id="overlay" class="oculto"></div>
+
+                 <div id="minha-demanda" class="demanda">
+                    <div class="demanda-conteudo">
+                        <h2>Faça sua demanda</h2>
+    
+                        <label for="descricao">Descriçao</label><br>
+                        <textarea id="descricao" rows="5"></textarea><br>
+    
+                        <label for="titulo">Título</label><br>
+                        <input type="text" id="titulo"><br>
+    
+                        <button id="concluido" class="botao-concluido">Concluído</button>
+                    </div>
+                </div><!--demanda-->
+
+
+
+            </div><!--interface-->
+        </section><!--meio-->
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="images/Logo.png" alt="">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
