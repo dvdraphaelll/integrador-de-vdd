@@ -46,6 +46,7 @@ body {
   display: flex;
   align-items: center;
   height: 81.7vh;
+  justify-content: center;
 }
 .meio .interface {
   background-color: #353535;
@@ -132,6 +133,19 @@ body {
   flex-direction: row;
   gap: 1.5vw;
   margin-left: 8vw;
+}
+.meio .interface .txt-meio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 19vw;
+  margin-left: 1vw;
+  text-align: justify;
+  font-size: 1.3vw;
 }
 
 .caixa-demanda {
